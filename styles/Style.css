@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+/*crear variables para no tener que modificar uno por uno es importante
+esta es la manera de crear variables dentro del css*/
+:root{
+    --color-primario: #27445D;
+    --color-secumdario: #71BBB2;
+    --color-terciario:#497D74;
+    --color-hover: #EFE9D5;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+background: var(--color-primario);
+color: var(--color-secumdario);
+box-sizing: border-box;
+}
+
+.header1{
+    padding: 2% 0% 0% 15%;
+
+}
+.header1__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header1_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.Text1{
+    color: var(--color-terciario);
+}
+
+.container1{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.Titulo_fuente{
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+}
+.Parrafo_estilo{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    /*para poder colocar color en nuestros botones es con border*/
+    border:2px solid var(--color-terciario);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-terciario);
+    font-family: var(--fuente-montserrat);
+}
+/*Hober es una forma de colocar un fondo de color a un boton al pasar el 
+raton sobre el*/
+.boton:hover{
+    background-color: var(--color-hover);
+}
+.imagen1{
+    width: 50%;
+}
+
+.Subtitulo1{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.footer1{
+    background-color: var(--color-terciario);
+    color:var(--color-primario);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/*Esta funcion sirve para delimitar el tamaño que queremos que tenga para 
+hacer un cambio*/
+@media (max-width:1200px ){
+    
+    .header1{
+        padding: 10%;
+    }
+
+    .header1__menu{
+        justify-content: center;
+    }
+
+    .container1{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion_contenido{
+        width: auto;
+    }
+}
